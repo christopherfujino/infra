@@ -150,7 +150,9 @@ def recipe(name):
 
 recipe('flutter/cocoon')
 recipe('flutter/flutter')
+recipe('flutter/flutter_v1_12_13')
 recipe('flutter/engine')
+recipe('flutter/engine_v1_12_13')
 recipe('flutter/engine_builder')
 recipe('flutter/ios-usb-dependencies')
 recipe('flutter/web_engine')
@@ -390,6 +392,7 @@ COMMON_HOTFIX_FRAMEWORK_BUILDER_ARGS = merge_dicts(
     COMMON_FRAMEWORK_BUILDER_ARGS, {
         'console_view_name':
         'hotfix-framework',
+        'recipe': 'flutter/flutter_v1_12_13',
         'triggered_by': ['hotfix-gitiles-trigger-framework'],
         'triggering_policy':
         scheduler.greedy_batching(max_batch_size=1,
@@ -468,6 +471,7 @@ COMMON_HOTFIX_ENGINE_BUILDER_ARGS = merge_dicts(
     COMMON_ENGINE_BUILDER_ARGS, {
         'console_view_name':
         'hotfix-engine',
+        'recipe': 'flutter/engine_v1_12_13',
         'triggered_by': ['hotfix-gitiles-trigger-engine'],
         'triggering_policy':
         scheduler.greedy_batching(max_batch_size=1,
