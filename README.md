@@ -8,7 +8,11 @@ than updating the individual .cfg files, updates should be made to
 
 ## Forcing the propagation of these configurations
 
-One may speed up the propagation of these configuration files by visiting the
-[luci-config web UI](https://luci-config.appspot.com/), logging in, and
-searching for projects/flutter. From there, one may click on the
+Configuration changes are read by the LUCI Configuration Service from
+[a gerrit mirror](https://chromium.googlesource.com/external/github.com/flutter/infra/)
+of this repo. Both the github -> googlesource mirroring and luci-config reading
+updated changes happen as scheduled tasks. Once a change has reached the
+mirror, one may speed up the propagation of the new configuration files by visiting the
+[luci-config web ui](https://luci-config.appspot.com/), logging in, and
+searching for projects/flutter. from there, one may click on the
 projects/flutter search result and click the download icon to force an update.
