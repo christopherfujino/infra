@@ -13,21 +13,18 @@ load("//lib/common.star", "common")
 load("//lib/repos.star", "repos")
 
 def _setup(branches):
+    shared_properties = {
+        "shard": "packaging",
+    }
     platform_args = {
         "linux": {
-            "properties": {
-                "shard": "framework_tests",
-            },
+            "properties": shared_properties,
         },
         "mac": {
-            "properties": {
-                "shard": "framework_tests",
-            },
+            "properties": shared_properties,
         },
         "windows": {
-            "properties": {
-                "shard": "framework_tests",
-            },
+            "properties": shared_properties,
         },
     }
 
