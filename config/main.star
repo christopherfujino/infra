@@ -40,7 +40,7 @@ BRANCHES = {
     "beta": {
         "testing-ref": r"refs/heads/flutter-1\.21-candidate\..+",
         "release-ref": r"refs/heads/beta",
-        "version": "1_20_0",
+        "version": None,
     },
     "dev": {
         # Don't match the last number of the branch name or else this will have
