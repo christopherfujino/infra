@@ -223,7 +223,7 @@ def engine_prod_config(platform_args, branch, version, ref, fuchsia_ctl_version)
     )
     common.linux_prod_builder(
         name = builder_name("Linux%s Web Framework tests|web_tests", branch),
-        recipe = "engine/web_engine_framework",
+        recipe = full_recipe_name("engine/web_engine_framework", version),
         properties = engine_properties(
             framework = True,
             shard = "web_tests",

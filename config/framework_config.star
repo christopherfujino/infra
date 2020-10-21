@@ -44,11 +44,6 @@ def framework_prod_config(branch, version, testing_ref, release_ref):
         cipd_version = "refs/heads/master",
     )
     luci.recipe(
-        name = "flutter/flutter_drone",
-        cipd_package = "flutter/recipe_bundles/flutter.googlesource.com/recipes",
-        cipd_version = "refs/heads/master",
-    )
-    luci.recipe(
         name = new_recipe_name,
         cipd_package = "flutter/recipe_bundles/flutter.googlesource.com/recipes",
         cipd_version = "refs/heads/master",
